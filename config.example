@@ -1,0 +1,16 @@
+storage:
+  type: sqlite
+  path: /tmp/data.db
+web:
+  port: 8080
+endpoints:
+  - name: google
+    url: "https://google.com"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+  - name: github
+    url: "https://github.com"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
